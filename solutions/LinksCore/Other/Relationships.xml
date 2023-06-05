@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityRelationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EntityRelationship Name="business_unit_crdb8_newtable" />
+  <EntityRelationship Name="lk_crdb8_newtable_createdby" />
+  <EntityRelationship Name="lk_crdb8_newtable_modifiedby" />
+  <EntityRelationship Name="owner_crdb8_newtable" />
+  <EntityRelationship Name="team_crdb8_newtable" />
+  <EntityRelationship Name="user_crdb8_newtable" />
+</EntityRelationships>
