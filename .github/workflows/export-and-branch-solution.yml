@@ -18,11 +18,11 @@ on:
       solution_folder:
         description: 'staging the unpacked solution folder before check-in *do not change*'
         required: true
-        default: /solution
+        default: /solutions
       solution_target_folder: 
        description: 'folder name to be created and checked in *do not change*'
        required: true
-       default: solution
+       default: solutions
 env:
 #edit your values here
   ENVIRONMENT_URL: ${{vars.DEV_ENVIRONMENT_URL}}
