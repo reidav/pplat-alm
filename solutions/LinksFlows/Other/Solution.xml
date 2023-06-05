@@ -87,10 +87,6 @@
         <Required type="1" schemaName="crdb8_newtable" displayName="Links " solution="Active" />
         <Dependent type="29" displayName="Description added" id="{d1005976-7f03-ee11-8f6e-6045bd6e16a7}" />
       </MissingDependency>
-      <MissingDependency>
-        <Required type="connectionreference" displayName="crdb8_sharedcommondataserviceforapps_c1db5" solution="Active" id.connectionreferencelogicalname="crdb8_sharedcommondataserviceforapps_c1db5" />
-        <Dependent type="29" displayName="Description added" id="{d1005976-7f03-ee11-8f6e-6045bd6e16a7}" />
-      </MissingDependency>
     </MissingDependencies>
   </SolutionManifest>
 </ImportExportXml>
