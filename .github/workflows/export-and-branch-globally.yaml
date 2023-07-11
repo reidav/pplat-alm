@@ -1,4 +1,4 @@
-name: release-solution-globally
+name: export-and-branch-globally
 on:
   workflow_dispatch:
   release:
