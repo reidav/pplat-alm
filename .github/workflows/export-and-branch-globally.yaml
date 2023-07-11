@@ -1,0 +1,43 @@
+name: release-solution-globally
+on:
+  workflow_dispatch:
+  release:
+    types: [created]
+  
+env:
+  BUILD_ENVIRONMENT_URL: ${{vars.DEV_ENVIRONMENT_URL}}
+  UAT_ENVIRONMENT_URL: ${{vars.UAT_ENVIRONMENT_URL}}
+  BUILD_CLIENT_ID: ${{vars.DEV_CLIENT_ID}}
+  UAT_CLIENT_ID: ${{vars.UAT_CLIENT_ID}}
+  TENANT_ID: ${{vars.DEV_TENANT_ID}}
+
+permissions:
+  contents: write
+
+jobs:
+  export-links-core:
+    uses: ./.github/workflows/reusable-export-and-branch-solution.yml
+    with:
+      solution_name: LinksCore
+      solution_exported_folder: /out
+      solution_folder: /solutions
+      solution_target_folder: solutions
+    secrets: inherit
+    
+  export-links-flows:
+    uses: ./.github/workflows/reusable-export-and-branch-solution.yml
+    with:
+      solution_name: LinksFlows
+      solution_exported_folder: /out
+      solution_folder: /solutions
+      solution_target_folder: solutions
+    secrets: inherit
+    
+  export-links-Canvas:
+    uses: ./.github/workflows/reusable-export-and-branch-solution.yml
+    with:
+      solution_name: LinksCanvas
+      solution_exported_folder: /out
+      solution_folder: /solutions
+      solution_target_folder: solutions
+    secrets: inherit

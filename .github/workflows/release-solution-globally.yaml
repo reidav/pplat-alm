@@ -27,6 +27,7 @@ jobs:
     
   deploy-links-flows:
     uses: ./.github/workflows/reusable-release-solution-to-uat.yml
+    needs: deploy-links-core
     with:
       solution_name: LinksFlows
       solution_shipping_folder: out/ship/
@@ -37,6 +38,7 @@ jobs:
     
   deploy-links-Canvas:
     uses: ./.github/workflows/reusable-release-solution-to-uat.yml
+    needs: deploy-links-flows
     with:
       solution_name: LinksCanvas
       solution_shipping_folder: out/ship/
