@@ -16,17 +16,17 @@ permissions:
 
 jobs:
   deploy-links-core:
-    uses: ./.github/workflows/reusable-release-solution-to-uat.yml@main
+    uses: ./.github/workflows/reusable-release-solution-to-uat.yml
     with:
       solution_name: LinksCore
     secrets: inherit
   deploy-links-flows:
-    uses: ./.github/workflows/reusable-release-solution-to-uat.yml@main
+    uses: ./.github/workflows/reusable-release-solution-to-uat.yml
     with:
       solution_name: LinksFlows
     secrets: inherit
   deploy-links-Canvas:
-    uses: ./.github/workflows/reusable-release-solution-to-uat.yml@main
+    uses: ./.github/workflows/reusable-release-solution-to-uat.yml
     with:
       solution_name: LinksCanvas
     secrets: inherit
