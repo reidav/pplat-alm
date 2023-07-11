@@ -32,9 +32,9 @@ on:
        required: true
        type: string
        default: out/release
-    secrets:
-      token:
-        required: true
+    # secrets:
+    #   token:
+    #     required: true
   workflow_dispatch:
     
   release:

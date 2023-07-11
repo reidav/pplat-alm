@@ -24,6 +24,7 @@ jobs:
       solution_source_folder: solutions/
       solution_release_folder: out/release
     secrets: inherit
+    
   deploy-links-flows:
     uses: ./.github/workflows/reusable-release-solution-to-uat.yml
     with:
@@ -33,6 +34,7 @@ jobs:
       solution_source_folder: solutions/
       solution_release_folder: out/release
     secrets: inherit
+    
   deploy-links-Canvas:
     uses: ./.github/workflows/reusable-release-solution-to-uat.yml
     with:
