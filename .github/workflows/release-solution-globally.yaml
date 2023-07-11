@@ -1,0 +1,32 @@
+name: release-solution-globally
+on:
+  workflow_dispatch:
+  release:
+    types: [created]
+  
+env:
+  BUILD_ENVIRONMENT_URL: ${{vars.DEV_ENVIRONMENT_URL}}
+  UAT_ENVIRONMENT_URL: ${{vars.UAT_ENVIRONMENT_URL}}
+  BUILD_CLIENT_ID: ${{vars.DEV_CLIENT_ID}}
+  UAT_CLIENT_ID: ${{vars.UAT_CLIENT_ID}}
+  TENANT_ID: ${{vars.DEV_TENANT_ID}}
+
+permissions:
+  contents: write
+
+jobs:
+  deploy-links-core:
+    uses: ./.github/workflows/reusable-release-solution-to-uat.yml@main
+    with:
+      solution_name: LinksCore
+    secrets: inherit
+  deploy-links-flows:
+    uses: ./.github/workflows/reusable-release-solution-to-uat.yml@main
+    with:
+      solution_name: LinksFlows
+    secrets: inherit
+  deploy-links-Canvas:
+    uses: ./.github/workflows/reusable-release-solution-to-uat.yml@main
+    with:
+      solution_name: LinksCanvas
+    secrets: inherit
