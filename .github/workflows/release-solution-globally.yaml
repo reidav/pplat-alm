@@ -19,14 +19,26 @@ jobs:
     uses: ./.github/workflows/reusable-release-solution-to-uat.yml
     with:
       solution_name: LinksCore
+      solution_shipping_folder: out/ship/
+      solution_outbound_folder: out/solutions/
+      solution_source_folder: solutions/
+      solution_release_folder: out/release
     secrets: inherit
   deploy-links-flows:
     uses: ./.github/workflows/reusable-release-solution-to-uat.yml
     with:
       solution_name: LinksFlows
+      solution_shipping_folder: out/ship/
+      solution_outbound_folder: out/solutions/
+      solution_source_folder: solutions/
+      solution_release_folder: out/release
     secrets: inherit
   deploy-links-Canvas:
     uses: ./.github/workflows/reusable-release-solution-to-uat.yml
     with:
       solution_name: LinksCanvas
+      solution_shipping_folder: out/ship/
+      solution_outbound_folder: out/solutions/
+      solution_source_folder: solutions/
+      solution_release_folder: out/release
     secrets: inherit
