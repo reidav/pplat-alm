@@ -19,6 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: uat
     steps:
+      - uses: actions/checkout@v3
       - uses: ./.github/workflows/reusable-release-solution-to-uat.yml
         with:
           solution_name: LinksCore
@@ -51,6 +52,7 @@ jobs:
     environment: prod
     needs: [ deploy-uat]
     steps:
+      - uses: actions/checkout@v3
       - uses: ./.github/workflows/reusable-release-solution-to-uat.yml
         with:
           solution_name: LinksCore
