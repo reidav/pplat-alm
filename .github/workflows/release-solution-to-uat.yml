@@ -106,13 +106,14 @@ jobs:
       with:
         name: managedSolutions
         path: ${{ github.event.inputs.solution_release_folder}}
-    - name: Import solution to prod env
+    
+    - name: Import solution to uat env
       uses: microsoft/powerplatform-actions/import-solution@v0
       with:
         environment-url: ${{env.UAT_ENVIRONMENT_URL}}
         app-id: ${{env.UAT_CLIENT_ID}}
         client-secret: ${{ secrets.UAT_APP_SECRET }}
-        tenant-id: ${{env.TENANT_ID}}
+        tenant-id: ${{env.TENANT_ID}}""
         solution-file: ${{ github.event.inputs.solution_release_folder}}/${{ github.event.inputs.solution_name }}.zip
         force-overwrite: true
         publish-changes: true
