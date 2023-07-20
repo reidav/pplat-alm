@@ -1,4 +1,4 @@
-name: release-solution-globally
+name: release-management
 on:
   workflow_dispatch:
   release:
